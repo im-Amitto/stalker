@@ -1,0 +1,22 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    restart: always
+  stalker:
+    build: ./backend
+    image: meamyth/stalker-backend
+    volumes:
+      - /usr/src/app/node_modules
+      - ./backend:/usr/src/app
+    environment:
+      NODE_ENV: prod
+      DB_HOST: mongo
+      DB_PORT: 27017
+      JWT_SECRET: jwt-secret-key
+  nginx:
+    build: ./nginx
+    ports:
+    - '80:80'
+    depends_on:
+    - stalker

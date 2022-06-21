@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: backend
+  template:
+    metadata:
+      labels:
+        component: backend
+    spec:
+      containers:
+        - name: backend
+          image: meamyth/stalker-backend
+          ports:
+            - containerPort: 5000
+          env:
+            - name: NODE_ENV
+              value: prod
+            - name: DB_HOST
+              value: mongodb-service
+            - name: DB_PORT
+              value: "27017"
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: jwtsecret
+                  key: JWTSECRET
+
