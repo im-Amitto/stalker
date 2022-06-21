@@ -8,6 +8,7 @@ const checkDuplicateUsernameOrEmail = (req, res, next) => {
   }).exec((err, user) => {
     if (err) {
       res.status(500).send({ message: err });
+      req.log.err({ message: err }, "Error checking for duplicate username");
       return;
     }
     if (user) {
@@ -20,6 +21,7 @@ const checkDuplicateUsernameOrEmail = (req, res, next) => {
     }).exec((err, user) => {
       if (err) {
         res.status(500).send({ message: err });
+        req.log.err({ message: err }, "Error checking for duplicate email");
         return;
       }
       if (user) {

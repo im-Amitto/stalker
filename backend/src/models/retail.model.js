@@ -6,9 +6,10 @@ export default mongoose.model(
     name: String,
     inventory: [
       {
-        productId: mongoose.Schema.Types.ObjectId,
-        promotionId: mongoose.Schema.Types.ObjectId,
+        product: { type: mongoose.Schema.Types.ObjectId , ref: 'Product' },
+        promotion: { type: mongoose.Schema.Types.ObjectId , ref: 'Promotion' },
         qty: Number,
+        price: Number,
       }
     ]
   })

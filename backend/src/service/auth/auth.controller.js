@@ -10,11 +10,13 @@ export const signup = (req, res) => {
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 8)
     });
-    user.save((err) => {
+    user.save((err,user) => {
         if (err) {
             res.status(500).send({ message: err });
+            req.log.err({ message: err }, "Error registering user");
             return;
         }else{
+            req.log.child(user).info('User registered');
             res.status(200).send({ message: "User was registered successfully!" });
         }
     });
@@ -26,6 +28,7 @@ export const signin = (req, res) => {
     }).exec((err, user) => {
         if (err) {
             res.status(500).send({ message: err });
+            req.log.err({ message: err }, "Error fetching user");
             return;
         }
         if (!user) {
@@ -36,6 +39,7 @@ export const signin = (req, res) => {
             user.password
         );
         if (!passwordIsValid) {
+            req.log.warn('Invalid Password!');
             return res.status(401).send({
                 accessToken: null,
                 message: "Invalid Password!"
@@ -44,7 +48,8 @@ export const signin = (req, res) => {
         var token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
             expiresIn: 86400 // 24 hours
         });
-        var authorities = [];
+
+        req.log.child(user).info('User logged in');
         res.status(200).send({
             id: user._id,
             username: user.username,

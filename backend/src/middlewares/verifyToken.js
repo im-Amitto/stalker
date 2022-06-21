@@ -8,6 +8,7 @@ const verifyToken = (req, res, next) => {
   }
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) {
+      req.log.warn('Unauthorised access attempt');
       return res.status(401).send({ message: "Unauthorized!" });
     }
     req.userId = decoded.id;

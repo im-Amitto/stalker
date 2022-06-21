@@ -4,7 +4,6 @@ export default mongoose.model(
   "Promotions",
   new mongoose.Schema({
     title: String,
-    subtext: String,
-    addedBy: mongoose.Schema.Types.ObjectId,
+    subtext: String
   })
 );

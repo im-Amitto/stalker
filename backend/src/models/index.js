@@ -1,7 +1,15 @@
 import mongoose from 'mongoose';
 import User from "./user.model.js";
+import Brand from "./brand.model.js";
+import Product from "./product.model.js";
+import Retail from "./retail.model.js";
+import Promotion from "./promotion.model.js";
 mongoose.Promise = global.Promise;
 const db = {};
 db.mongoose = mongoose;
 db.user = User;
+db.brand = Brand;
+db.product = Product;
+db.retail = Retail;
+db.promotion = Promotion;
 export default db;
