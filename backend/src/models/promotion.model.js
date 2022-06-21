@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+import mongoose from 'mongoose';
 
-const Promotions = mongoose.model(
+export default mongoose.model(
   "Promotions",
   new mongoose.Schema({
     title: String,
@@ -8,5 +8,3 @@ const Promotions = mongoose.model(
     addedBy: mongoose.Schema.Types.ObjectId,
   })
 );
-
-module.exports = Promotions;

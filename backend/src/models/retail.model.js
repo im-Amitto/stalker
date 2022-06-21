@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+import mongoose from 'mongoose';
 
-const Retail = mongoose.model(
+export default mongoose.model(
   "Retail",
   new mongoose.Schema({
     name: String,
@@ -13,5 +13,3 @@ const Retail = mongoose.model(
     ]
   })
 );
-
-module.exports = Retail;

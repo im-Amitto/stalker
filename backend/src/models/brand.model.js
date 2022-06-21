@@ -1,10 +1,8 @@
-const mongoose = require("mongoose");
+import mongoose from 'mongoose';
 
-const Brand = mongoose.model(
+export default mongoose.model(
   "Brand",
   new mongoose.Schema({
     name: String,
   })
 );
-
-module.exports = Brand;
