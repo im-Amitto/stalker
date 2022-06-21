@@ -1,0 +1,840 @@
+{
+	"info": {
+		"_postman_id": "e768a867-6fbf-471b-835f-e062297f333e",
+		"name": "Stalker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17232632"
+	},
+	"item": [
+		{
+			"name": "Add Brand",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Gucci\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{stalker_url}}/api/brand",
+					"host": [
+						"{{stalker_url}}"
+					],
+					"path": [
+						"api",
+						"brand"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Brand",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Gucci\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{stalker_url}}/api/brand",
+							"host": [
+								"{{stalker_url}}"
+							],
+							"path": [
+								"api",
+								"brand"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"50-0LBYtnwBf1lhEIQ0r0g/hOHfZSc\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2022 10:53:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Brand has been added successfully!\",\n    \"id\": \"62b1a31ac51e376f5bbc74bf\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Gucci\",\n    \"password\":\"Gucci\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{stalker_url}}/api/auth/signin",
+					"host": [
+						"{{stalker_url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"Gucci\",\n    \"password\":\"Gucci\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{stalker_url}}/api/auth/signin",
+							"host": [
+								"{{stalker_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "265"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"109-Qx9VI6/RqYrhkEFxee7+XunJUQ8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2022 10:45:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"62b1a13526521fd6645f2c65\",\n    \"username\": \"Gucci\",\n    \"email\": \"example@ex.com\",\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYjFhMTM1MjY1MjFmZDY2NDVmMmM2NSIsImlhdCI6MTY1NTgwODMxNCwiZXhwIjoxNjU1ODk0NzE0fQ.u6QCFFvgEh3GU6OA2E3ToD6HZdraLSNk-YIFG7enUuc\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Gucci\",\n    \"password\":\"Gucci\",\n    \"email\":\"example@ex.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{stalker_url}}/api/auth/signup",
+					"host": [
+						"{{stalker_url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"Gucci\",\n    \"password\":\"Gucci\",\n    \"email\":\"example@ex.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{stalker_url}}/api/auth/signup",
+							"host": [
+								"{{stalker_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f-ycIOj/6kXGxPaEoiW5+ikfXgO5w\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2022 10:45:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User was registered successfully!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Purse2\",\n    \"brandId\":\"62b1a31ac51e376f5bbc74bf\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{stalker_url}}/api/product",
+					"host": [
+						"{{stalker_url}}"
+					],
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Purse2\",\n    \"brandId\":\"62b1a31ac51e376f5bbc74bf\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{stalker_url}}/api/product",
+							"host": [
+								"{{stalker_url}}"
+							],
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"52-TNuGl4RijtpsUQbVQ/xzGRWwU2Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2022 10:53:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Product has been added successfully!\",\n    \"id\": \"62b1a320c51e376f5bbc74c1\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{stalker_url}}/api/product",
+					"host": [
+						"{{stalker_url}}"
+					],
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List All Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{stalker_url}}/api/product",
+							"host": [
+								"{{stalker_url}}"
+							],
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "70"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"46-IsZ/EKZKyL8UvC+7BdJaiBpEgq0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2022 10:54:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 1,\n    \"list\": [\n        {\n            \"name\": \"Purse2\",\n            \"id\": \"62b1a320c51e376f5bbc74c1\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Promotion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"Monthly sale\",\n    \"subtext\":\"30% flat off\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{stalker_url}}/api/promotion",
+					"host": [
+						"{{stalker_url}}"
+					],
+					"path": [
+						"api",
+						"promotion"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Promotion",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Monthly sale\",\n    \"subtext\":\"30% flat off\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{stalker_url}}/api/promotion",
+							"host": [
+								"{{stalker_url}}"
+							],
+							"path": [
+								"api",
+								"promotion"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21-k6UIO/38Xe9VU+8o7Q5dunZcoG0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2022 10:55:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"62b1a39856be3232c4e06e06\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Retail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Shop 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{stalker_url}}/api/retail",
+					"host": [
+						"{{stalker_url}}"
+					],
+					"path": [
+						"api",
+						"retail"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Retail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Shop 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{stalker_url}}/api/retail",
+							"host": [
+								"{{stalker_url}}"
+							],
+							"path": [
+								"api",
+								"retail"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "49"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"31-GLqFDCHgV9LJoE+FwdYiZR332Ak\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2022 10:57:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Retail has been added successfully!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Inventory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\":\"62b1a320c51e376f5bbc74c1\",\n    \"retailId\":\"62b1aa07562a34754849a3a3\",\n    \"qty\":9,\n    \"price\":60\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{stalker_url}}/api/inventory",
+					"host": [
+						"{{stalker_url}}"
+					],
+					"path": [
+						"api",
+						"inventory"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Inventory",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\":\"62b1a320c51e376f5bbc74c1\",\n    \"retailId\":\"62b1aa07562a34754849a3a3\",\n    \"qty\":9,\n    \"price\":121,\n    \"promotionId\":\"62b1a39856be3232c4e06e06\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{stalker_url}}/api/inventory",
+							"host": [
+								"{{stalker_url}}"
+							],
+							"path": [
+								"api",
+								"inventory"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-UrJJGdPrpkwAnb/tSJ8ApHnIB80\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2022 11:41:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Inventory has been updated\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Product Availability",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\":\"62b1a320c51e376f5bbc74c1\",\n    \"retailId\":\"62b1aa07562a34754849a3a3\",\n    \"qty\":9,\n    \"price\":60\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{stalker_url}}/api/inventory",
+					"host": [
+						"{{stalker_url}}"
+					],
+					"path": [
+						"api",
+						"inventory"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Product Availability",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\":\"62b1a320c51e376f5bbc74c1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{stalker_url}}/api/product/availability",
+							"host": [
+								"{{stalker_url}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"availability"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "x-access-token, Origin, Content-Type, Accept"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "259"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"103-oKfmnLThELeh4FoSIXEkHpBMOUU\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2022 12:07:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"shops\": [\n        {\n            \"name\": \"Shop 1\",\n            \"promotion\": {\n                \"_id\": \"62b1a39856be3232c4e06e06\",\n                \"title\": \"Monthly sale\",\n                \"subtext\": \"30% flat off\",\n                \"__v\": 0\n            },\n            \"price\": 121\n        }\n    ],\n    \"notSelling\": [\n        {\n            \"name\": \"Shop 2\",\n            \"id\": \"62b1b49463ad030303433808\"\n        },\n        {\n            \"name\": \"Shop 3\",\n            \"id\": \"62b1b49763ad03030343380a\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "stalker_url",
+			"value": "localhost:5000"
+		}
+	]
+}

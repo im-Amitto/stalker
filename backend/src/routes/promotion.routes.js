@@ -1,4 +1,5 @@
 import { addNewPromotion } from "../service/promotion/promotion.controller.js";
+import { verifyToken } from "../middlewares/index.js";
 
 export default function (app) {
     app.use(function (req, res, next) {
@@ -8,5 +9,5 @@ export default function (app) {
         );
         next();
     });
-    app.post("/api/promotion", addNewPromotion);
+    app.post("/api/promotion", [verifyToken], addNewPromotion);
 };

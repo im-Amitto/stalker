@@ -1,4 +1,5 @@
 import { addNewRetail, updateInventory } from "../service/retails/retails.controller.js";
+import { verifyToken } from "../middlewares/index.js";
 
 export default function (app) {
     app.use(function (req, res, next) {
@@ -9,5 +10,5 @@ export default function (app) {
         next();
     });
     app.post("/api/retail", addNewRetail);
-    app.post("/api/inventory", updateInventory);
+    app.post("/api/inventory", [verifyToken], updateInventory);
 };
